@@ -25,7 +25,7 @@ const Tasks: React.FC = () => {
         const fetchTasks = async () => {
             try {
                 const response = await axios.get(`/api/tasks?projectId=${projectId}`);
-                const filteredTasks = response.data.tasks.filter((task) => task.projectId === projectId);
+                const filteredTasks = response.data.tasks.filter((task: { projectId: string | string[] | undefined; }) => task.projectId === projectId);
                 setTasks(filteredTasks);
             } catch (error) {
                 console.error('Error fetching tasks:', error);
@@ -79,7 +79,7 @@ const Tasks: React.FC = () => {
             message.success('Task created successfully!');
             setIsModalVisible(false);
             const response = await axios.get(`/api/tasks?projectId=${projectId}`);
-            const filteredTasks = response.data.tasks.filter((task) => task.projectId === projectId);
+            const filteredTasks = response.data.tasks.filter((task: { projectId: string | string[] | undefined; }) => task.projectId === projectId);
             setTasks(filteredTasks);
         } catch (error) {
             console.error('Error creating task:', error);
@@ -102,7 +102,7 @@ const Tasks: React.FC = () => {
             message.success('Task updated successfully!');
             setIsEditModalVisible(false);
             const response = await axios.get(`/api/tasks?projectId=${projectId}`);
-            setTasks(response.data.tasks.filter((task) => task.projectId === projectId));
+            setTasks(response.data.tasks.filter((task: { projectId: string | string[] | undefined; }) => task.projectId === projectId));
         } catch (error) {
             console.error('Error updating task:', error);
             message.error('Failed to update task');
@@ -119,7 +119,7 @@ const Tasks: React.FC = () => {
             });
             message.success('Task marked as completed!');
             const response = await axios.get(`/api/tasks?projectId=${projectId}`);
-            setTasks(response.data.tasks.filter((task) => task.projectId === projectId));
+            setTasks(response.data.tasks.filter((task: { projectId: string | string[] | undefined; }) => task.projectId === projectId));
         } catch (error) {
             console.error('Error marking task as completed:', error);
             message.error('Failed to complete task');

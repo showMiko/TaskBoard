@@ -16,7 +16,8 @@ const Navbar: React.FC = () => {
 
   useEffect(() => {
     const user = auth.currentUser;
-    setUserEmail(user?.email);
+    if(user)
+    setUserEmail(user.email);
     // setUserEmail(localStorage.getItem("email"));
     setRole(localStorage.getItem("role"));
     setUserId(localStorage.getItem("userId"));
@@ -46,7 +47,7 @@ const Navbar: React.FC = () => {
   return (
     <Header style={{ background: '#fff', boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <Link href={`/main?role=${role}&email=${encodeURIComponent(userEmail)}&userId=${encodeURIComponent(userId)}`} passHref>
+        <Link href={`/main?role=${role}&email=${encodeURIComponent(userEmail?userEmail:"")}&userId=${encodeURIComponent(userId?userId:"")}`} passHref>
           <Button type="text" icon={<HomeOutlined />} style={{ fontSize: '16px', color: '#000' }} >
           {pathname.startsWith("/task")?
           <Typography >/Tasks</Typography>

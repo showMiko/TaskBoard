@@ -50,7 +50,7 @@ const MainPage: React.FC = () => {
             await Promise.all(
                 userDocs.map(async userDoc => {
                     const userData = userDoc.data();
-                    const updatedProjects = userData.projects?.filter(project => project.projectId !== selectedProjectId);
+                    const updatedProjects = userData.projects?.filter((project: { projectId: string; }) => project.projectId !== selectedProjectId);
                     if (updatedProjects?.length !== userData.projects?.length) {
                         await updateDoc(doc(db, 'users', userDoc.id), { projects: updatedProjects });
                     }
@@ -302,7 +302,7 @@ const MainPage: React.FC = () => {
                                                 <Title level={5}>Approver: {approverEmail}</Title>
 
                                                 <Avatar.Group maxCount={4}>
-                                                    <Avatar size="large" style={{ backgroundColor: '#f56a00' }}>{email[0]}</Avatar>
+                                                    <Avatar size="large" style={{ backgroundColor: '#f56a00' }}>{email?email[0]:""}</Avatar>
                                                     <Avatar size="large" style={{ backgroundColor: '#66ff66' }}>{contributorEmail[0]}</Avatar>
                                                     <Avatar size="large" style={{ backgroundColor: '#4da6ff' }}>{reviewerEmail[0]}</Avatar>
                                                     <Avatar size="large" style={{ backgroundColor: '#333300' }}>{approverEmail[0]}</Avatar>
