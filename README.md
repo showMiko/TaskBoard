@@ -1,18 +1,10 @@
-# Caravel Labs L1 Engineer Hiring Assessment
-
-### NOTE: If you are not able to create a branch and push to this origin, please fork this repoistory and make a Pull Request
-
-[Click here to fork this repo](https://github.com/CaravelLabs/CL-L1-Assessment/fork)
+# Task Board System
 
 ## Table of Contents
 - [Task Details](#task-details)
 - [API Documentation](#api-documentation)
 - [Data Model Documentation](#data-model-documentation)
-- [Design](#design)
-- [Expectations](#expectations)
-- [Pull Request (PR) Guidelines](#pull-request-pr-guidelines)
-- [Documentation](#documentation)
-- [Getting Started](#getting-started)
+
 
 ## Task Details
 
@@ -267,86 +259,3 @@ The project aims to develop a comprehensive project management system with robus
 
 </details>
 
-## Design
-
-We have added a sample design documentation for you to better understand the flow of the task.
-<br>
-[Sample Design Documentation](https://www.figma.com/design/0kv12pmBqOgP4jeL3P3tP7/L1-Assessment?node-id=26-19744&t=IOwpn43ImLzt0Ad3-1)
-
-## Expectations
-
-<details>
-<summary>Click to expand</summary>
-
-- Fork the repository and clone it.
-- The Authentication and Login logic and UI implementation is upto you and your creativity.
-- Design the data model, handler functions and the APIs based on the documentation provided above
-- Implement the UI with a framework of your choice according to the sample design provided (_MaterialUI/AntDesign Recommended_).
-- Please follow the data model and the handler methods accurately with proper naming (as mentioned above) so that the tests run successfully.
-- **DO NOT CHANGE THE NAMES OF THE FUNCTIONS OTHERWISE THE TESTS WON'T RUN.**
-- Variables should be named properly according to camelCase.
-- Maintain the casing as showcased in the repository. [camel Casing and Pascal Casing where it should be]
-- Command to run test: `npm test` [inside web folder]
-
-- For Brownie Points:
-  - Implement the solution based on a standard design pattern (Strategy, MVC, MVVM, Singleton, Factory), solid principles, and coding standards and practices (e.g., variable naming, formatted code, OOP principles).
-  - UI enhancement on the original screens.
-  - Writing own test cases (as unit tests).
-
-  **Please remember it is important to pass the basic test cases. The rest will only be taken into consideration if you pass the original test cases. Tampering/Changing original test cases will lead to disqualification**
-
-</details>
-
-## Pull Request (PR) Guidelines
-
-<details>
-<summary>Click to expand</summary>
-
-- Every person should **NOT** make more than 1 pull request.
-- Pull Requests should have screenshots of UI and a Video Walkthrough attached with proper description behind your work.
-- Please make sure all the status checks are passed after you make the PR. We have the following status checks:
-  - SonarCloud: Code quality analysis.
-  - PR Validation: Build Validation and Test Success Validation.
-
-</details>
-
-
-## Documentation
-
-Documentation to some of the libraries or tech stacks that you might be using in this assessment:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [Ant Design](https://ant.design/components/overview/) - design library documentation
-- [Material UI](https://mui.com/material-ui/getting-started/) - material UI documentation
-
-_We suggest using Ant Design for the UI_
-
-
-## Getting Started
-
-First, route yourself to the web folder
-
-```bash
-cd web
-```
-
-Then run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
